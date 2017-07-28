@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="app/css/main.css" rel="stylesheet">
+        <script src="app/js/angular.min.js"></script>
+        <script src="app/js/angular-ui-router.min.js"></script>
+        <script src="app/gym-module.js"></script>
+        <!--Common  -->
+        <script src="app/common/common-module.js"></script>
+        <script src="app/common/events-service.js"></script>
+        <!--Public  -->
+        <script src="app/public/public-routes.js"></script>
+        <script src="app/public/events/event-model.js"></script>
+        <script src="app/public/events/events-controller.js"></script>
+        <script src="app/public/home/home-controller.js"></script>
+        <!--Admin  -->
+        <script src="app/admin/admin-routes.js"></script>
+        <script src="app/admin/admin-module.js"></script>
+        <script src="app/admin/authhttp-interceptor.js"></script>
+        <script src="app/admin/services/login-service.js"></script>
+        <script src="app/admin/services/current-user-model.js"></script>
+        <script src="app/admin/services/authredirector-service.js"></script>
+        <script src="app/admin/login/login-controller.js"></script>
+        <script src="app/admin/admin-auth/admin-auth-controller.js"></script>
+
+    </head>
+    <body ng-app="gym" ng-strict-di>
+        <header>
+            <div class="navbar-brand">
+                <a href="index.html"><h2>Gym</h2></a>
+            </div>
+            <div id="navbar-list">
+                <ul>
+                    <li ui-sref-active="active">
+                        <a ui-sref="public.contact">Contact</a>
+                    </li>
+                    <li>
+                       <a ui-sref="public.galery">Galery</a> 
+                    </li>
+                    <li>
+                        <a ui-sref="public.events">Events</a>
+                    </li>
+                    <li>
+                        <a ui-sref="public.about">About</a>
+                    </li>
+                </ul>     
+            </div>
+        </header>
+        <ui-view>
+            <div style="text-align: center;">
+                <h2>Loading</h2>
+            </div>
+        </ui-view>
+
+        <footer>
+            <div id="bottomBar">
+                <a href="index.html"><h2>Gym</h2></a>
+                <span>&copy; Copyright All rights reserved </span><a id="admin" ui-sref="admin">  | Admin </a>
+                <a id="social" href="https://www.gmail.com/" target="_blank">mail</a>
+                <a id="social" href="https://www.facebook.com/" target="_blank">facebook</a>
+            </div>
+        </footer>
+        
+    </body>
+</html>

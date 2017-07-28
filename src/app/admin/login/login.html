@@ -1,0 +1,15 @@
+<div id="login">
+    <h1>Administrator Login</h1>
+    <form>
+        <label>Username</label>
+        <input type="text" ng-model="login.username">
+    </form>
+    <form>
+        <label>Password</label>
+        <input type="password" ng-model="login.password">
+    </form>
+    <form>
+        <button type="button" ng-click="login.login()" ng-disabled="!login.valid()">Login</button>
+    </form>
+    <div ng-if="login.error">{{login.error}}</div>
+</div>
