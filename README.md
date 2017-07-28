@@ -1,2 +1,2 @@
-# gym
+# Gym
 Written in AngularJS
